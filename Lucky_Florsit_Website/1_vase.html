@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lucky Florist Vase Arrangements</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link href="./assets/styles.css" rel="stylesheet"/>
+     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+     <script>
+        function myFunction() {
+        var x = document.getElementById("responsiveNav");
+        if (x.className === "mainNav") {
+            x.className += " responsive";
+            console.log('turn menu on')
+        } else {
+            x.className = "mainNav";
+            console.log('turn menu off')
+        }
+        }
+    </script>
+</head>
+<!-- <link href=insert font here>-->
+
+<body>
+   
+    
+<!--    Navigation Bar-->
+    
+    <div class="header">
+        <div class="logo"><a href="index.html"><img src="assets/images/logolarge.png"></a></div>
+        <nav class="mainNav" id="responsiveNav">
+        <ul>
+           <li><a href="javascript:void(0);" style="font-size:8.5vw;" class="icon" onclick="myFunction()">&#9776;</a>
+            </li>
+            <li><a class="active" href="1_vase.html">Vase Arrangements</a>
+            </li>
+            <li><a href="2_centerpieces.html">Centerpieces</a>
+            </li>
+            <li><a href="3_sympathy.html">Sympathy</a>
+            </li>
+            <li><a href="about.html">About</a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+  
+  
+  <br><br>
+  
+<!--Content-->
+   
+   <div id="viewport">
+          
+    <h2>Vase Arrangements</h2>
+           
+    <div class="gallery">
+     <p> 
+       We offer vase arrangements for all sorts of occasions. Let us know if you have a preferred flower type or color, and we'll create a custom bouquet for you.
+    </p>
+       
+    </div>
+        
+    <div class="flex_container_gallery">
+     
+   <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase01.jpg" >
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase02.jpg" >
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase03.jpg" >
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase04.jpg" >
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase06.jpg">
+    </div>
+    
+    <div class="mySlides"> 
+   <img class="myImage" src="assets/images/vases/Vase07.jpg">
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase08.jpg">
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase09.jpg">
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase10.jpg">
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase11.jpg">
+    </div>
+    
+    <div class="mySlides"> 
+    <img class="myImage" src="assets/images/vases/Vase12.jpg">
+    </div>
+    
+    <button class="w3-display-left arrowbutton" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-display-right arrowbutton" onclick="plusDivs(1)">&#10095;</button>
+        
+    </div>
+     
+    </div>
+      
+  
+  <br><br>  <br><br>  <br><br>  <br><br>
+  <br><br>  <br><br>  <br><br>  <br><br>
+
+<!--Footer-->
+   
+    <div class="footer">
+    Address: 501 W MacArthur Blvd, Oakland, CA 94609 <br> Phone: (510) 653-3737<br>
+    Hours: 8.30 am- 5.30pm Monday-Friday
+    </div>
+    
+    
+    <script>
+        
+        var slideIndex = 0;
+        
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            showDivs(slideIndex);
+        }
+
+        function showDivs(theIndex) {
+            var x = document.getElementsByClassName("mySlides");
+            
+            var highestIndex = x.length - 1;
+            
+            if (theIndex > highestIndex){slideIndex=0;}
+            if (theIndex < 0){slideIndex=highestIndex;}
+
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            if (window.screen.width <= 600) {
+                x[slideIndex].style.display = "block";
+            } else {
+                x[slideIndex].style.display = "block";
+                x[slideIndex + 1].style.display = "block";
+                x[slideIndex + 2].style.display = "block";
+            }
+
+        }
+
+
+        //1. We start by declaring what image should display first. 
+        //2. Next we will call a function to show the next image that is triggered by an event declared above. 
+        //3. Now we need to tell the computer to hide all images except the one we want to see. 
+
+    </script>
+
+
+</body>
+</html>
